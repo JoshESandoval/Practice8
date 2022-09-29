@@ -18,7 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/run-migrations', function () {
-    return Artisan::call('migrate', ["--force" => true]);
+    return Artisan::call('migrate');
+    echo Artisan::output();
+
 });
 
 Route::get('/dashboard', function () {
